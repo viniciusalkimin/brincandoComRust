@@ -30,4 +30,46 @@ fn main() {
     let condicao = if PI == 3.14 { true } else { false};
 
     println!("resultado eh = {}", condicao);
+
+    repeticao();
+
+    println!("Nova fn de repeticao ======> ");
+
+    repeticao_loop();
+
+    println!("Nova fn de repeticao ======> ");
+
+    repeticao_for();
+
+}
+
+
+fn repeticao() {
+    let multiplicador:u16 = 2;
+    let mut contador:u16 = 0;
+
+    while contador < 10 {
+        contador+=1;
+        println!("{} x {} = {}", multiplicador, contador, multiplicador*contador);
+    }
+}
+
+fn repeticao_loop(){
+    let multiplicador:u8 = 5;
+    let mut contador:u8 = 0;  
+    loop {          
+        contador+=1;
+        println!("{} x {} = {}", multiplicador, contador, multiplicador*contador);  
+        if contador == 10 {
+            break;
+        }         
+    }
+}
+
+fn repeticao_for(){
+    let multiplicador:u8 = 3;
+
+    for i in 1..11{
+        println!("{} x {} = {}", multiplicador, i, multiplicador*i);  
+    }
 }
