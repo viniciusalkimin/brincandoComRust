@@ -41,6 +41,18 @@ fn main() {
 
     repeticao_for();
 
+    let linguagem = "Lua";
+
+    let proposito = match linguagem {
+        "Java" => "Multi proposito",
+        "PHP" => "Web",
+        "Kotlin" => "Android",
+        "Swift" => "IOS",
+        _ => "Não conhecida"
+    };
+
+    println!("A linguagem {} tem o proposito {}.", linguagem, proposito);
+
 }
 
 
