@@ -53,6 +53,28 @@ fn main() {
 
     println!("A linguagem {} tem o proposito {}.", linguagem, proposito);
 
+    let qualquer_string = String::from("Vinicius");
+
+   // rouba_uma_string(qualquer_string.clone());
+
+    rouba_uma_string( &qualquer_string);
+
+    println!("{}",qualquer_string);
+
+    rouba_uma_string2(qualquer_string);
+
+    
+
+
+
+}
+
+fn rouba_uma_string(string: &String) {
+    println!("{}", string);
+}
+
+fn rouba_uma_string2(string: String) {
+    println!("{}", string);
 }
 
 
