@@ -1,0 +1,4 @@
+[package]
+name = "bricando_com_rust"
+version = "0.0.1"
+authors = ["Vinicius Alkimin <viniciusg_alkimin@hotmail.com>"]
