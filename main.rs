@@ -66,6 +66,8 @@ fn main() {
     println!("{}", qualquer_string); 
 
     pattern_match();
+
+    erros();
 }
 
 fn rouba_uma_string(string: &String) {
@@ -119,4 +121,17 @@ fn pattern_match() {
         });
 
     }
+}
+
+fn erros() {
+   // panic!("Testando erro proposital!");
+   match resultado() {
+    Ok(s) => println!("String de sucesso: {}", s),
+    Err(num) => println!("String de erro: Cod{}", num)
+   }
+}
+
+fn resultado() -> Result<String, u16>{
+    //Ok(String::from("Tudo certo!"))
+    Err(404)
 }
