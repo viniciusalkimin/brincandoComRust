@@ -53,7 +53,7 @@ fn main() {
 
     println!("A linguagem {} tem o proposito {}.", linguagem, proposito);
 
-    let qualquer_string = String::from("Vinicius");
+    let mut qualquer_string = String::from("Vinicius");
 
    // rouba_uma_string(qualquer_string.clone());
 
@@ -61,19 +61,17 @@ fn main() {
 
     println!("{}",qualquer_string);
 
-    rouba_uma_string2(qualquer_string);
+    rouba_uma_string2(&mut qualquer_string);
 
-    
-
-
-
+    println!("{}", qualquer_string);
 }
 
 fn rouba_uma_string(string: &String) {
     println!("{}", string);
 }
 
-fn rouba_uma_string2(string: String) {
+fn rouba_uma_string2(string: &mut String) {
+    string.push_str(" Alkimin");
     println!("{}", string);
 }
 
