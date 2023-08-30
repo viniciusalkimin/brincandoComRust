@@ -63,7 +63,9 @@ fn main() {
 
     rouba_uma_string2(&mut qualquer_string);
 
-    println!("{}", qualquer_string);
+    println!("{}", qualquer_string); 
+
+    pattern_match();
 }
 
 fn rouba_uma_string(string: &String) {
@@ -103,5 +105,18 @@ fn repeticao_for(){
 
     for i in 1..11{
         println!("{} x {} = {}", multiplicador, i, multiplicador*i);  
+    }
+}
+
+fn pattern_match() {
+    for x in 1..11 {
+        println!("{}: {}", x, match x {
+            1 => "Pouco",
+            2 | 3 => "Mais ou menos",
+            4..=5 => "Um monte",
+            _ if x % 2 == 0 => "Par é pakas",
+            _ => "Bastante"
+        });
+
     }
 }
